@@ -1,0 +1,47 @@
+<----- TypeScript ------>
+* There are two concepts on typescript optional chaining and null collision
+
+<----- Basics ------> and <------ Componenets -------->
+
+* Every Coponent, Directive and Pipe are being added in the ngModule which carries the information of the entire app which is intern added
+to the main.ts file
+* We can add as many project as possible in one repository , the method is called the mono repository.
+--> The resources and files can be shared
+
+* pollyfiles.ts is the file that is used to add neccessary browser changes to make the application run on different browsers.
+--> The file is not present in the updated version of angular, i.e, angular 16
+
+* editorconfig is th file which helps to add features that are present in other code editors for development purpose
+
+* The typescript dont run on the browser, so it is converted into Javascript
+* Karma and Jasmine are the default testing libraries present in angular
+
+* Angular.json file contains the development environment for the application
+--> The rootsource can be changed to the name we want, it is usually changed to the project name or the company's name
+
+<------- Directives --------->
+* There are two types of Directives 
+1. Structural Directive
+2. Attribute Directive
+
+* Structural Directives starts with an * symbol which symbolizes that they are structural
+* They are used to manipulate the DOM 
+* The structural Directives are *ngIf, *ngFor, ngSwitch
+
+* Attribute Directives are used to manipulate or change some of the Elementtal Properties
+* The Attribute Directives are ngStyle and ngClass
+
+<------  Pipes ------>
+* They are ues to trasform data without actually changing the original object
+* They are modified during execution and not the original format
+* Built-in Pipes 
+decimal, percent, uppercase, lowercase, currency, json, slice, async, date editorconfig
+* You can also create your own custom pipes if required
+
+<-------- Life Cycle Hooks----------->
+1. ngOnInit => * The constructor is first rendered everytime the componenet runs.
+               * Only non- blocking code should be written in the constructor
+               * The data allocation is usually done inside the ngOnInit 
+
+2. ngOnChange => * To first understand ngOnChanges we must understand Input and Output decorators, Data sharing between pages without
+the Input and Output Decorators and 

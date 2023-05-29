@@ -1,0 +1,24 @@
+Rooms List:s
+<table>
+    <tr>
+        <!-- <th>Even/Odd</th> -->
+        <th>Room Number</th>
+        <th>Room Type</th>
+        <th>Room Price</th>
+        <th>Room Checkin Time</th>
+        <th>Room Checkout Time</th>
+        <th>Liked Service</th>
+    </tr>
+    <!-- <tr *ngFor="let rooms of roomList"; let e = "even"; let o = "odd;"> -->
+        <!-- We can even add index to the list -->
+        <!-- Example for ngClss Attribute Directive -->
+    <tr [ngClass]="rooms.likedService ? 'liked':'disliked'" *ngFor="let rooms of roomList">
+        <!-- <td>{{"even" ? "even" : "odd"}}</td> -->
+        <td>{{rooms.roomNumber}}</td>
+        <td>{{rooms.roomType}}</td>
+        <td>{{rooms.roomPrice | currency : 'GBP'}}</td>
+        <td>{{rooms.roomCheckin | date : 'short'}}</td>
+        <td>{{rooms.roomCheckout | date: 'short'}}</td>
+        <td>{{rooms.likedService}}</td>
+    </tr>
+</table>

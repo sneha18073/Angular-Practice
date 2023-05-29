@@ -1,0 +1,37 @@
+<!-- Template Engine - working
+There are three types to connect our js and html pages
+1. Interpolation
+2. Property Binding
+3. Event Binding -->
+
+<!-- Example of Interpolation -->
+<h1>Welcome to {{title}}</h1>
+
+<!-- Example for Property binding -->
+<!-- Usaually in regular js it is written as:
+document.getElementbyId('noOfRooms').innerText = "" -->
+<!-- <div [hidden] = "hideRooms"> -->
+<div [ngStyle] = "{'color' : rooms.availableRooms ? 'green':'red'}" [hidden]="hideRooms">
+    The number of rooms Available are:
+    <div [innerText] = noOfRooms></div>
+</div>
+
+<!-- Demonstration for the Structural Attributes ngIf and ngFor -->
+
+<!-- This method is called optional chaining and null collision topics in typescript -->
+<!-- {{rooms?.availableRooms ?? "no Rooms"}} -->
+
+
+<div *ngIf = "rooms.availableRooms > 0" >
+    <app-rooms-list [rooms]="roomList"></app-rooms-list>
+</div>
+
+
+<!-- Example for Event Binding -->
+<!-- Usually it is done like <button onClick = buttonClick()></button> -->
+<button (click)="toggle()">toggle</button>
+
+<!-- This is recommended only to use during debugging and not in production -->
+<!-- <div>
+    {{roomList | json}}
+</div> -->
